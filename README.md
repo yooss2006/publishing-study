@@ -10,4 +10,4 @@
 
 ## 과제물
 
-[google 화면 클론]();
+[google 화면 클론](https://github.com/yooss2006/publishing-study/blob/main/google%20%ED%99%94%EB%A9%B4%20%ED%81%B4%EB%A1%A0/google.md);
