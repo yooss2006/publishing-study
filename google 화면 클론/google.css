@@ -1,0 +1,110 @@
+html {
+  font-size: 14px;
+}
+body {
+  background: url(./img/새벽.jpg);
+  background-position: 0 -100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.header .nav .nav__list {
+  display: flex;
+  justify-content: right;
+  margin: 20px 0 60px;
+}
+.header .nav .nav__list .nav__item {
+  margin-right: 20px;
+}
+.header .nav .nav__list .nav__item .nav__img {
+  width: 23px;
+  vertical-align: top;
+}
+
+.main .cont-img {
+  margin-bottom: 40px;
+}
+.main .cont-img .cont-img__img-google {
+  width: 350px;
+}
+
+.main .cont-search {
+  margin-bottom: 40px;
+}
+.main .cont-search .cont-search__form {
+  display: inline-block;
+  position: relative;
+}
+.main .cont-search .cont-search__form::before {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: url(./img/search.png);
+  top: 10px;
+  left: 20px;
+  background-size: contain;
+  content: "";
+}
+.main .cont-search .cont-search__inp {
+  width: 450px;
+  height: 40px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding-left: 50px;
+}
+.main .cont-search .cont-search__form::after {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: white;
+  top: 10px;
+  right: 20px;
+  content: "";
+}
+.main .cont-search .cont-search__form::after {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: url(./img/mic.png);
+  top: 10px;
+  right: 20px;
+  background-size: contain;
+  content: "";
+}
+
+.main .cont-go .cont-go__list {
+  width: 350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 20px;
+}
+.main .cont-go .cont-go__list .cont-go__item {
+  padding: 10px 0;
+}
+.main .cont-go .cont-go__list .cont-go__item .cont-go__circle {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+}
+.main .cont-go .cont-go__list .cont-go__item .cont-go__circle .cont-go__img {
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main .cont-go .cont-go__list .cont-go__item .cont-go__tit {
+  margin-top: 3px;
+  vertical-align: top;
+}
+.main .cont-go .cont-go__list .cont-go__item:hover {
+  background-color: rgba(255, 255, 255, 0.301);
+}
