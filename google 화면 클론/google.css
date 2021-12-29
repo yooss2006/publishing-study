@@ -3,8 +3,8 @@ html {
 }
 body {
   background: url(./img/새벽.jpg);
-  background-position: 0 -100px;
-  background-size: cover;
+  background-position: 0 -200px;
+  background-size: auto;
   background-repeat: no-repeat;
   color: white;
 }
@@ -74,6 +74,9 @@ body {
   content: "";
 }
 
+.main .cont-go {
+  margin-bottom: 250px;
+}
 .main .cont-go .cont-go__list {
   width: 350px;
   margin: 0 auto;

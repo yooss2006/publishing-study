@@ -5,3 +5,7 @@
 
 html 유효성 검사 통과
 css 유효성 검사 통과
+
+## 실행화면
+
+<img src="./img/스크린샷.png" width="800px">
