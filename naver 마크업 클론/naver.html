@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>naver 마크업 클론코딩</title>
+  </head>
+  <body>
+    <!-- 왜 ul을 사용하지 않았는지 -->
+    <!-- <ul>
+      <li><a href="#">뉴스스텐드 바로가기</a></li>
+      <li><a href="#">주제별캐스트 바로가기</a></li>
+      <li><a href="#">타임스퀘어 바로가기</a></li>
+      <li><a href="#">쇼핑캐스트 바로가기</a></li>
+      <li><a href="#">로그인 바로가기</a></li>
+    </ul> -->
+    <article>
+      <a href="#">뉴스스탠드 바로가기</a>
+      <a href="#">주제별캐스트 바로가기</a>
+      <a href="#">타임스퀘어 바로가기</a>
+      <a href="#">쇼핑캐스트 바로가기</a>
+      <a href="#">로그인 바로가기</a>
+    </article>
+
+    <header>
+      <h1><img src="https://s.pstatic.net/static/www/mobile/edit/20211230/mobile_220127709265.gif" alt="네이버" width="500px"></h1>
+      <nav>
+        <a href="#">네이버를 시작페이지로</a>
+        <a href="#">쥬니어네이버</a>
+        <a href="#">해피빈</a>
+      </nav>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>검색</legend>
+          <select>
+            <option value="통합검색">통합검색</option>
+            <option value="블로그">블로그</option>
+            <option value="카페">카페</option>
+          </select>
+          <br />
+          <!-- 프리티어가 /> 자꾸 사용하네요 ㅠㅠ 리엑트때문에 남겨놓습니다. -->
+          <input type="search" placeholder="검색어를 입력해 주세요." />
+          <br />
+          <button type="submit">검색</button>
+        </fieldset>
+      </form>
+      <a href="#">한글 입력기</a><br>
+      <a href="#">자동완성 레이어</a><br>
+      <strong>최근검색어</strong><br>
+      <a href="#">전체삭제</a>
+      <ul>
+        <li><a href="#">@txt@</a> @date@. <a href="#">삭제</a></li>
+      </ul>
+    </header>
+    <main>
+      <section>
+        <!-- <h2>카테고리별 이동</h2> -->
+        <ul>
+          <li><a href="#">메일</a></li>
+          <li><a href="#">카페</a></li>
+          <li><a href="#">블로그</a></li>
+          <li><a href="#">지식iN</a></li>
+          <li><a href="#">쇼핑</a></li>
+          <li><a href="#">쇼핑LIVE</a></li>
+          <li><a href="#">Pay</a></li>
+          <li><a href="#">TV</a></li>
+        </ul>
+        <dl>
+          <dt>ㄱ-ㅁ</dt>
+          <dd><a href="#">날씨</a></dd>
+          <dd><a href="#">네이버 my car</a></dd>
+          <dd><a href="#">네이버 게임</a></dd>
+          <dt>ㅂ-ㅅ</dt>
+          <dd><a href="#">밴드</a></dd>
+          <dd><a href="#">부동산</a></dd>
+          <dd><a href="#">북마크</a></dd>
+          <dt>ㅇ</dt>
+          <dd><a href="#">엑스퍼트</a></dd>
+          <dd><a href="#">영화</a></dd>
+          <dd><a href="#">오디오클립</a></dd>
+        </dl>
+        <dl>
+          <dt>ㄱ-ㅁ</dt>
+          <dd><input type="checkbox" />날씨</dd>
+          <dd><input type="checkbox" />네이버 MY CAR</dd>
+          <dd><input type="checkbox" />네이버 게임</dd>
+          <dt>ㅂ-ㅅ</dt>
+          <dd><input type="checkbox" />밴드</dd>
+          <dd><input type="checkbox" />부동산</dd>
+          <dd><input type="checkbox" />북마크</dd>
+          <dt>ㅇ</dt>
+          <dd><input type="checkbox" />엑스퍼트</dd>
+          <dd><input type="checkbox" />영화</dd>
+          <dd><input type="checkbox" />오디오클립</dd>
+        </dl>
+      </section>
+      <section>
+        <h2>뉴스 스탠드</h2>
+        <!-- 아래 부분을 p태그를 사용하면 줄바꿈은 되어있는데 여백이 작음, br을 사용하면 잠시 멈춘다고 들어서 어떻게 해야할지 -->
+        <a href="#">연합뉴스</a> <br>
+       <a href="#">뉴스홈,연예,스포츠,경제</a></br>
+        <a href="#">뉴스스탠드</a>
+        <a href="#">이전</a>
+        <a href="#">다음</a>
+        <ul>
+          <li><a href="#">종합/경제</a></li>
+          <li><a href="#">방송/통신</a></li>
+          <li><a href="#">IT</a></li>
+          <li><a href="#">영자지</a></li>
+        </ul>
+        <!-- 닫는다는 것은 button이 맞지 않는가? -->
+        <a href="#">닫기</a>
+        <p>해당 언론사 사정으로 접근이 제한됩니다.</p>
+        <a href="#">확인</a></br>
+        <a href="#">닫기</a>
+        <section>
+          <div>
+            <img src="" alt="일간스포츠"></br>
+            <a href="#">구독</a>
+            <a href="#">해지</a>
+            <a href="#">기사보기</a>
+          </div>
+          <div>
+            <img src="" alt="the joongAng"></br>
+            <a href="#">구독</a>
+            <a href="#">해지</a>
+            <a href="#">기사보기</a>
+          </div>
+          <div>
+            <img src="" alt="ChosunBiz">
+            <a href="#">구독</a>
+            <a href="#">해지</a>
+            <a href="#">기사보기</a>
+          </div>
+        </section>
+      <p>해당 언론사 사정으로 접근이 제한됩니다.</p>
+      <a href="#">확인</a><br>
+      <a href="#">닫기</a>
+      <p>을(를)<br> 구독해지 하시겠습니까?</p>
+         <!-- b 태그 단순한 글자 굵기조절 strong 중요한 부분 강조 -->
+         <!-- strong 태그 홀로 사용 가능한가? 아니면 p로 감싸야하나? -->
+      <strong>구독한 언론사가 없습니다.</strong>
+      </section>
+
+      <section>
+        <h2>주제별 캐스트</h2>
+        <p><strong>오늘 읽을만한 글</strong>주제별로 분류된 다양한 글 모음</p>
+        <p><strong>976</strong>개의 글 <a href="#">관심주제 설정</a></p>
+        <a href="#">이전</a>
+        <a href="#">다음</a>
+        <ul>
+          <li><a href="#">엔터</a></li>
+          <li><a href="#">스포츠</a></li>
+          <li><a href="#">자동차</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">과학</a></li>
+          <li><a href="#">리빙</a></li>
+          <li><a href="#">건강</a></li>
+        </ul>
+        <ul>
+          <li>
+            <!-- 이미지와 글씨를 클릭시 같은 페이지로 이동됨 -->
+            <a href="#">
+              <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1640698376/noticon/awtl51ityspcm4iocxz7.png" alt="안경남자사진">
+              경제M <strong>고대 나와 삼성까지 관두고 안경점 운영하는 이유</strong>
+              <p>CES 2022 혁신상 받은 안경 제조•유통 브랜드 '브리즘' 창업 기업은 한 번 쯤 자금 부족에 시달리는 등 큰 시행착오를 겪는 ‘데스밸리(죽음의 계곡)’를 지납니다. 이 시기를 견디지 못하면 아무리 좋은 기술력, 서비스를 갖고 <br>있다 해도 생존하기 어려운데요. 잘 알려지기만 하면 시장에게 좋은 반응을 얻을 수 있는 중소기업이 죽음의 계곡에 빠지게 둘 순 </p>
+              <p>3주일 전 경제 하티스트</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1640698376/noticon/awtl51ityspcm4iocxz7.png" alt="아이디어 사람">
+              경제M <strong>코로나에도 709명을 해외 유학 보낸 30대가 위기 넘긴 아이디어</strong>
+              <p>어학연수 플랫폼 창업기 전 세계 영어권 국가의 1800여개 어학연수기관 중 국내 유학원을 통해 소개되는 곳은 100여 곳에 불과하다. 검색하면 쉽게 찾을 수 있을 것 같지만, 막상 바다 건너 정보를 수집해 입학 절차까지 혼자 </br> 진행하려면 겁부터 난다. 결국 연수기관 선택부터 결제까지 유학원에 의존해야 한다. 스타트업 어브로딘의 어학연수 중개 플랫폼 ‘뉴학’은</p>
+              <p>6dlf 전 뉴스타터</p>
+            </a>
+          </li>
+        </ul>
+        <!-- a태그 p태그 p태그를 사용하려 했으나 네이버보다 공백이 큼 -->
+        <p>
+          <a href="#">뮤직 급상승 차트</a><br>
+          오후 5시 업데이트 <br> 1위<br>
+          <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1640698376/noticon/awtl51ityspcm4iocxz7.png" alt="회전목마 앨범"><br>
+          <a href="#">회전목마</a><br>
+          <a href="#">소코도모</a><a href="#"> 쇼미더머니</a><br>
+          <a href="#">재생가사</a>
+        </p>
+        <p>
+         2위<br>
+          <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1640698376/noticon/awtl51ityspcm4iocxz7.png" alt="인생한잔 앨범"><br>
+          <a href="#">인생 한잔</a><br>
+          <a href="#">정은지</a><a href="#"> 술꾼도시여자들</a><br>
+          <a href="#">재생가사</a>
+        </p>
+      </section>
+      <section>
+        <h2>로그인</h2>
+        <p>네이버를 더 안전하고 편리하게 이용하세요</p>
+        <a href="#"><em>네이버</em>로그인</a><br>
+        <a href="#">아이디</a><a href="#">비밀번호찾기</a><br>
+        <a href="#">회원가입</a>
+      </section>
+      <section>
+        <h2>타임스퀘어</h2>
+        <a href="#">이전</a><a href="#">다음</a><br>
+        <a href="#"><strong>증시</strong></a><br>
+        <a href="#">top</a><button type="button">라이트모드로 보기</button>
+       <article>
+         <h3><a href="#">공지사항</a></h3>
+         <p><a href="#">서비스 전체보기</a></p>
+       </article>
+       <article>
+         <h3>Creators</h3>
+         <!-- 이런 경우 p로 감싸야하는지 -->
+         <!-- <p><a href="#">크리에이터</a> <a href="#">스몰비즈니스</a></p> -->
+         <a href="#">크리에이터</a> <a href="#">스몰비즈니스</a>
+       </article>
+       <article>
+         <h3>Partners</h3>
+         <a href="#">SME 풀케어 시스템</a> <a href="#">비즈니스 </a>
+       </article>
+       <article>
+         <h3>Developers</h3>
+         <a href="#">네이버 개발자 센트</a> <a href="#">오픈 API</a> <a href="#">오픈소스</a> <a href="#">네이버 D2</a> <a href="#">네이버 랩스</a><br>
+         <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1640698376/noticon/awtl51ityspcm4iocxz7.png" alt="웨일 브라우저"><br>
+         <strong>웨일 브라우저</strong> <a href="#">다운받기</a> <br>
+         <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1640698376/noticon/awtl51ityspcm4iocxz7.png" alt="프로젝트 꽃"><br>
+         <strong>프로젝트 꽃</strong> <a href="#">바로가기</a>
+       </article>
+       <article>
+        <h3>네이버 정책 및 약관</h3>
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">인재채용</a></li>
+          <li><a href="#">제휴제안</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+          <li><a href="#">청소년보호정책</a></li>
+          <li><a href="#">네이버 정책</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+        <a href="#">ⓒ NAVER Corp.</a>
+      </article>
+      </section>
+     
+    </main>
+  </body>
+</html>
