@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 14px;
+}
+body {
+  width: 100%;
+}
+li {
+  list-style: none;
+}
+.blind {
+  position: absolute;
+  top: -10000000px;
+}
+
+.funding__list {
+  width: 90%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 40px;
+}
+.funding__list .funding__item {
+  width: 100%;
+}
+.funding__list .funding__item .funding__cont-img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.funding__list .funding__item .funding__cont-img .funding__img {
+  width: 100%;
+}
+.funding__list .funding__item .funding__tit {
+  margin: 20px 0;
+  font-size: 1.7rem;
+}
+.funding__list .funding__item .funding__classification {
+  display: flex;
+  color: gray;
+}
+.funding__list .funding__item .funding__classification dt::after {
+  content: "|";
+  margin: 0 5px;
+}
+.funding__list .funding__item .funding__cont-progress {
+  margin-top: 10px;
+}
+.funding__list .funding__item .funding__progress {
+  width: 100%;
+}
+.funding__list .funding__item .funding__progress::-webkit-progress-bar {
+  background-color: gainsboro;
+}
+.funding__list .funding__item .funding__progress::-webkit-progress-value {
+  background-color: skyblue;
+}
+.funding__list .funding__item .funding__progress-desc {
+  color: gray;
+}
+.funding__list
+  .funding__item
+  .funding__progress-desc
+  .funding__progress-percent {
+  font-size: 1.3rem;
+  color: #0175ff;
+}
+.funding__list
+  .funding__item
+  .funding__progress-desc
+  .funding__progress-number::before {
+  content: "·";
+  margin-right: 3px;
+}
+.funding__list .funding__item .funding__progress-desc .funding__progress-dday {
+  float: right;
+}
