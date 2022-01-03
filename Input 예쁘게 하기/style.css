@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 15px;
+}
+body {
+  width: 100%;
+  text-align: center;
+}
+li {
+  list-style: none;
+}
+h2 {
+  font-size: 1.3rem;
+}
+.header h1 {
+  margin: 40px;
+  font-size: 2rem;
+}
+main {
+  margin: 0 auto;
+  width: 80%;
+}
+.subject {
+  margin-bottom: 30px;
+}
+.subject input[type="radio"],
+.study input[type="checkbox"],
+.file input[type="file"] {
+  display: none;
+}
+.subject label span {
+  display: inline-block;
+  width: 33%;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border: 1px solid gainsboro;
+  color: rgb(156, 156, 156);
+}
+.subject label span:hover {
+  border: 1px solid gray;
+  color: gray;
+}
+.subject input[type="radio"]:checked + label span {
+  border: red solid 2px;
+  color: red;
+}
+
+.study {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.study ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.study ul li label {
+  display: flex;
+  align-items: center;
+}
+.study ul li:hover > label > span {
+  border: 1px solid gray;
+}
+.study ul li label span {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: inline-block;
+  line-height: 30px;
+  align-items: baseline;
+  border: 1px solid gainsboro;
+  margin-right: 5px;
+  box-sizing: border-box;
+}
+.study ul li label span::before {
+  display: none;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+}
+.study ul li input[type="checkbox"]:checked + label span {
+  border: 2px solid red;
+}
+.study ul li input[type="checkbox"]:checked + label span::before {
+  display: block;
+}
+
+.file label div {
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
+  margin: 20px auto;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+}
+.file label div:hover {
+  border: 2px solid red;
+  color: red;
+}
+
+.submit-btn {
+  margin-top: 30px;
+  width: 300px;
+  height: 50px;
+  border: 2px solid black;
+  color: white;
+  background-color: black;
+  border-radius: 30px;
+  transition: 0.5s all;
+}
+.submit-btn:hover {
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+}

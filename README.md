@@ -19,3 +19,5 @@
 [google 페이지 링크](https://yooss2006.github.io/publishing-study/google%20%ED%99%94%EB%A9%B4%20%ED%81%B4%EB%A1%A0/google.html)
 
 네이버 마크업 클론코딩
+
+[와디즈 리스트 클론](https://yooss2006.github.io/publishing-study/와디즈 리스트 클론/wadiz.html)

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input 예제</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>input 즐기기</h1>
+    </header>
+    <main role="main">
+      <form action="/" method="post">
+        <section class="subject">
+          <h2>좋아하는 과목을 고르세요(택1)</h2>
+          <input type="radio" name="subject" id="math" />
+          <label for="math"> <span>수학</span> </label>
+          <input type="radio" name="subject" id="science" />
+          <label for="science"> <span>과학</span> </label>
+          <input type="radio" name="subject" id="english" />
+          <label for="english"> <span>영어</span> </label>
+        </section>
+        <section class="study">
+          <h2>스터디할 과목을 고르세요 (다중선택 가능)</h2>
+
+            <ul>
+              <li>
+                <input type="checkbox" name="python" id="python" />
+                <label for="python"><span></span> python </label>
+              </li>
+              <li>
+                <input type="checkbox" name="java" id="java" />
+                <label for="java"><span></span> java </label>
+              </li>
+              <li>
+                <input type="checkbox" name="ruby" id="ruby" />
+                <label for="ruby"><span></span> ruby </label>
+              </li>
+              <li>
+                <input type="checkbox" name="html" id="html" />
+                <label for="html"><span></span> html </label>
+              </li>
+              <li>
+                <input type="checkbox" name="css" id="css" />
+                <label for="css"><span></span> css </label>
+              </li>
+            </ul>
+
+          </div>
+        </section>
+        <section class="file">
+          <h2>신분증을 첨부해주세요.</h2>
+          <label
+            ><input type="file" accept="image/png, image/jpg, image/jpeg" />
+            <div>
+              + 이미지 업로드
+            </div>
+          </label>
+        </section>
+        <button type="submit" class="submit-btn">제출</button>
+      </form>
+    </main>
+  </body>
+</html>
