@@ -23,3 +23,5 @@
 [와디즈 리스트 클론](https://yooss2006.github.io/publishing-study/%EC%99%80%EB%94%94%EC%A6%88%20%EB%A6%AC%EC%8A%A4%ED%8A%B8%20%ED%81%B4%EB%A1%A0/wadiz.html)
 
 [input 예쁘게 꾸미기](https://yooss2006.github.io/publishing-study/Input%20%EC%98%88%EC%81%98%EA%B2%8C%20%ED%95%98%EA%B8%B0/input.html)
+
+[modal 만들기](https://yooss2006.github.io/publishing-study/modal%20%EB%A7%8C%EB%93%A4%EA%B8%B0/modal.html)

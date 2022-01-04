@@ -1,0 +1,195 @@
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(600px, 0);
+  }
+  50% {
+    transform: translate(600px, -110px) rotate(-90deg);
+  }
+  75% {
+    transform: translate(0, -110px) rotate(-180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-360deg);
+  }
+}
+@keyframes cloud {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(130vw, -100px);
+  }
+  75% {
+    transform: translate(130vw, 200px);
+  }
+  100% {
+    transform: translate(-130vw, 0);
+  }
+}
+@keyframes cloud2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-130vw, 300px);
+  }
+  50% {
+    transform: translate(+130vw, -300px);
+  }
+  75% {
+    transform: translate(-130vw, 0px);
+  }
+  100% {
+    transform: translate(+130vw, 300px);
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  /* 이거 물어보기 */
+  background: url("./bgImg.jpg") no-repeat center center/cover;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.dimm {
+  position: fixed;
+  background-color: rgba(55, 55, 59, 0.7);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modalWrap {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  position: fixed;
+  width: 700px;
+  height: 40vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.modalWrap:hover {
+  box-shadow: 0 0 40px 1px yellow;
+}
+.modalWrap:hover .rabit2 {
+  bottom: -300px;
+}
+
+.contents {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+.prev {
+  left: -50px;
+}
+.next {
+  right: -50px;
+}
+
+.indicator {
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+.indicator-link {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(167, 167, 167);
+  border-radius: 50%;
+}
+.a-on {
+  background-color: rgb(255, 218, 8);
+}
+.indicator li span {
+  position: absolute;
+  top: -19999px;
+}
+
+.btnClose {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: rgb(255, 255, 255) 1px solid;
+  background-color: rgb(255, 233, 30);
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7em;
+}
+
+.rabit {
+  width: 150px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  animation: move 7s infinite ease-in;
+  z-index: 0;
+}
+
+.hover-rabit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.rabit2 {
+  width: 500px;
+  position: absolute;
+  left: 0;
+  bottom: -600px;
+  transition: 2s all;
+  z-index: 10;
+}
+
+.cloud1 {
+  width: 200px;
+  position: absolute;
+  left: -200px;
+  top: 100px;
+  animation: cloud 25s infinite ease-in;
+}
+.cloud2 {
+  width: 200px;
+  position: absolute;
+  right: -200px;
+  top: 300px;
+  animation: cloud2 20s infinite ease-in;
+}
