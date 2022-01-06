@@ -1,43 +1,43 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>flex test</title>
-  </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    ul {
-      width: 50%;
+    <title>Document</title>
+    <style>
+      .wrap {
+        margin: 100px auto;
+        width: 500px;
+        height: 300px;
+        border: 1px solid red;
+        display: flex;
+      }
 
-      height: 20%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      outline: 1px solid red;
-      flex-wrap: nowrap;
-      background-color: yellow;
-    }
-    li {
-      width: 50px;
-      flex-basis: 60px;
-      /* flex-shrink: 1; */
-    }
-    .cont {
-      /* flex-shrink: 0; */
-      width: 70px;
-      background-color: green;
-    }
-  </style>
+      .a {
+        background-color: coral;
+        flex-grow: 1;
+        width: 200px;
+      }
+
+      .b {
+        background-color: olive;
+        flex-grow: 1;
+        width: 100px;
+      }
+
+      .c {
+        background-color: gold;
+        flex-grow: 1;
+        width: 100px;
+      }
+    </style>
+  </head>
   <body>
-    <ul>
-      <li>1</li>
-      <li class="cont">2</li>
-      <li>3</li>
-    </ul>
+    <div class="wrap">
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+    </div>
   </body>
 </html>

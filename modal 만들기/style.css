@@ -5,11 +5,21 @@
   25% {
     transform: translate(600px, 0);
   }
+  26%,
+  40% {
+    transform: translate(600px, 0) rotate(-90deg);
+  }
   50% {
-    transform: translate(600px, -110px) rotate(-90deg);
+    transform: translate(600px, -220px) rotate(-90deg);
+  }
+  51% {
+    transform: translate(600px, -220px) rotate(-180deg);
   }
   75% {
-    transform: translate(0, -110px) rotate(-180deg);
+    transform: translate(0, -220px) rotate(-180deg);
+  }
+  76% {
+    transform: translate(0, -220px) rotate(-270deg);
   }
   100% {
     transform: translate(0, 0) rotate(-360deg);
