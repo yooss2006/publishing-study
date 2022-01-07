@@ -4,6 +4,17 @@
 
 <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c38322d9-89d1-47d9-99b7-d35c9dcca753/CSS-2.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220104%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220104T163447Z&X-Amz-Expires=86400&X-Amz-Signature=7d71b97f65ffa0e5bd550b9f592c966072b77b15cf9892364026c891be16e430&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22CSS-2.jpg%22&x-id=GetObject">
 
+## flex 컨테이너 속성
+
+아이템을 한번에 정렬한다.
+
+- justify-content
+  - flex 진행방향으로의 정렬
+  - 기본 값 : flex-start
+- align-content
+  - flex 진행방향의 반대방향으로 정렬
+  - 기본 값 : stretch - 진행 방향의 반대방향으로 쭉 늘려 채운다.
+
 ## flex의 아이템 속성
 
 자식요소에 설정한다.
@@ -41,6 +52,10 @@
 - 기본은 flex : 0 1 auto;
 - 많이 쓰는 것은 flex : 1 이런 식이다.
   - flex 1 1 auto를 의미한다.
+
+### align-self
+
+- 아이템 중 선택한 하나만 정렬 위치를 바꾼다.
 
 ### 꿀 팁
 
