@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "ACCchildrenheartOTF-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112-2@1.0/ACCchildrenheartOTF-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  text-align: center;
+  font-family: "ACCchildrenheartOTF-Regular";
+}
+ol,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 2em;
+}
+.cont-dog ul {
+  display: flex;
+  justify-content: center;
+}
+.cont-dog ul li input[type="checkbox"] {
+  display: none;
+}
+.cont-dog ul li {
+  margin: 0 30px;
+}
+
+.cont-dog ul li label .dog {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: url(./img/off.png);
+  background-size: cover;
+  margin-bottom: 15px;
+}
+.cont-dog ul li input:checked + label .spitz {
+  background: url(./img/1.png);
+  background-size: cover;
+}
+.cont-dog ul li input:checked + label .poodle {
+  background: url(./img/2.png);
+  background-size: cover;
+}
+.cont-dog ul li input:checked + label .husky {
+  background: url(./img/3.png);
+  background-size: cover;
+}
+.submit-btn {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  font-family: "ACCchildrenheartOTF-Regular";
+  font-size: 1em;
+  transition: 0.5s all;
+}
+.submit-btn:hover {
+  box-shadow: 0 0 10px 1px rgba(99, 99, 99, 0.562);
+}

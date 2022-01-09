@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input 예제</title>
+    <link rel="stylesheet" href="dogStyle.css" />
+  </head>
+  <body>
+      <form action="/" method="post">
+        <section class="cont-dog">
+          <h1>함께할 강아지를 선택해주세요.</h1>
+            <ul>
+              <li>
+                <input type="checkbox" name="spitz" id="spitz" />
+                <label for="spitz"> <span class="dog spitz"></span> 스피츠 </label>
+              </li>
+              <li>
+                <input type="checkbox" name="poodle" id="poodle" />
+                <label for="poodle"><span class="dog poodle"></span> 푸들 </label>
+              </li>
+              <li>
+                <input type="checkbox" name="husky" id="husky" />
+                <label for="husky"><span class="dog husky"></span> 허스키 </label>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <button type="submit" class="submit-btn">제출</button>
+      </form>
+  </body>
+</html>

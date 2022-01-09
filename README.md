@@ -25,3 +25,5 @@
 [input 예쁘게 꾸미기](https://yooss2006.github.io/publishing-study/Input%20%EC%98%88%EC%81%98%EA%B2%8C%20%ED%95%98%EA%B8%B0/input.html)
 
 [modal 만들기](https://yooss2006.github.io/publishing-study/modal%20%EB%A7%8C%EB%93%A4%EA%B8%B0/modal.html)
+
+[checkbox 꾸미기](https://yooss2006.github.io/publishing-study/Input%20%EC%98%88%EC%81%98%EA%B2%8C%20%ED%95%98%EA%B8%B0/checkbox.html)
