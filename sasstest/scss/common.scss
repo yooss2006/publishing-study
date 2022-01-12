@@ -5,3 +5,43 @@ body {
   font-family: sans-serif;
   font-weight: normal;
 }
+
+.subHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f1f1f1;
+  padding: 0 10px;
+}
+.btnBack {
+  font-size: 20px;
+  background-color: coral;
+}
+.space {
+  flex-grow: 1;
+  background-color: red;
+}
+.title {
+  padding: 0 10px;
+  font-weight: 600;
+}
+.btnOption {
+  font-size: 30px;
+  background-color: olive;
+}
+
+.pageHeader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    height: 88px;
+    background-color: #333;
+    color: #fff;
+  }
+}

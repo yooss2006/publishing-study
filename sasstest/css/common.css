@@ -1,1 +1,199 @@
-body,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ul,ol,blockquote,fieldset{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:inherit}h1,h2,h3,h4,h5,h6,strong,b,th{font-weight:inherit}i,em,address{font-style:inherit}a{text-decoration:none;color:inherit}mark{background:transparent;color:inherit}ul,ol,li{padding:0;margin:0;list-style:none}table{border-spacing:0;border-collapse:col}th,td{border:1px solid red}fieldset{border:none}input[type=text]::placeholder{color:#999;font-style:italic}input[type=text]:focus{background-color:olive;color:#fff}button{cursor:pointer}.blind,hr,legend{position:absolute;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px;overflow:hidden}q::before,q::after{content:""}.target{position:fixed;left:0;right:0;width:100vw;height:100vh;background-color:#1e90ff;color:#fff}.target .inner{border:1px solid #fff;border-radius:15px;padding:20px;height:200px;overflow:auto;margin:100px auto;max-width:500px}.target h1{font-size:100px;text-align:center}.target p{line-height:1.2;margin:10px 0}.target img{max-width:100%;margin:10px 0}.grayBox div:nth-child(1){background-color:#333}.grayBox div:nth-child(2){background-color:#666}.grayBox div:nth-child(3){background-color:#999}body{font-family:sans-serif;font-weight:normal}/*# sourceMappingURL=common.css.map */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b,
+th {
+  font-weight: inherit;
+}
+
+i,
+em,
+address {
+  font-style: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+mark {
+  background: transparent;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: col;
+}
+
+th,
+td {
+  border: 1px solid red;
+}
+
+fieldset {
+  border: none;
+}
+
+input[type=text]::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+input[type=text]:focus {
+  background-color: olive;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+}
+
+.blind,
+hr,
+legend {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+q::before,
+q::after {
+  content: "";
+}
+
+.target {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: dodgerblue;
+  color: #fff;
+}
+.target .inner {
+  border: 1px solid #fff;
+  border-radius: 15px;
+  padding: 20px;
+  height: 200px;
+  overflow: auto;
+  margin: 100px auto;
+  max-width: 500px;
+}
+.target h1 {
+  font-size: 100px;
+  text-align: center;
+}
+.target p {
+  line-height: 1.2;
+  margin: 10px 0;
+}
+.target img {
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+.grayBox div:nth-child(1) {
+  background-color: #333;
+}
+.grayBox div:nth-child(2) {
+  background-color: #666;
+}
+.grayBox div:nth-child(3) {
+  background-color: #999;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+.subHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f1f1f1;
+  padding: 0 10px;
+}
+
+.btnBack {
+  font-size: 20px;
+  background-color: coral;
+}
+
+.space {
+  flex-grow: 1;
+  background-color: red;
+}
+
+.title {
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+.btnOption {
+  font-size: 30px;
+  background-color: olive;
+}
+
+.pageHeader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.pageHeader ul {
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+  background-color: #333;
+  color: #fff;
+}
+
+/*# sourceMappingURL=common.css.map */

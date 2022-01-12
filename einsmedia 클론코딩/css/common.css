@@ -1,0 +1,737 @@
+@charset "UTF-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b,
+th {
+  font-weight: inherit;
+}
+
+i,
+em,
+address {
+  font-style: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+mark {
+  background: transparent;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: col;
+}
+
+th,
+td {
+  border: 1px solid red;
+}
+
+fieldset {
+  border: none;
+}
+
+input[type=text]::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+input[type=text]:focus {
+  background-color: olive;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+}
+
+.blind,
+hr,
+legend {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+q::before,
+q::after {
+  content: "";
+}
+
+@keyframes barSizeUp {
+  0% {
+    transform: translateX(-330px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes arrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "GmarketSansMedium";
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background: black;
+  box-sizing: border-box;
+  z-index: 10;
+  transition: 0.5 all;
+}
+.header .header-tit a img {
+  width: 150px;
+}
+.header .nav {
+  width: 800px;
+}
+.header .nav .nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav .nav-list .nav-item {
+  color: white;
+}
+.header .nav .nav-list .nav-btn-list {
+  margin-left: 10px;
+}
+.header .nav .nav-list .nav-btn-list button {
+  background: none;
+  border: none;
+}
+.header .nav .nav-list .nav-btn-list button img {
+  width: 40px;
+}
+
+.main section {
+  position: relative;
+  height: 100vh;
+  z-index: 0;
+}
+.main .cont-width80 {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.main .cont-represent {
+  background: url(../img/bg.jpg) no-repeat center center/cover;
+  color: white;
+}
+.main .cont-represent .cont-width80 h2 {
+  width: 800px;
+  font-size: 4em;
+  font-family: "GmarketSansBold";
+}
+.main .cont-represent .cont-width80 p {
+  margin-top: 10px;
+}
+.main .cont-represent .represent-slide {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%) rotate(270deg);
+}
+.main .cont-represent .represent-slide button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+}
+.main .cont-represent .represent-slide .space {
+  flex-grow: 1;
+}
+.main .cont-represent .represent-cont-sns ul {
+  width: 100px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: 30px;
+  bottom: 10px;
+}
+.main .cont-represent .represent-cont-sns ul li a img {
+  width: 20px;
+}
+.main .cont-adManagement {
+  background: white;
+  color: black;
+}
+.main .cont-adManagement div .adManagement-tit {
+  width: 440px;
+  position: relative;
+  font-family: "GmarketSansBold";
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+.main .cont-adManagement div .adManagement-tit:after {
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  display: inline-block;
+  content: ".";
+  color: red;
+}
+.main .cont-adManagement div .adManagement-desc {
+  width: 350px;
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  font-size: 0.9em;
+}
+.main .cont-adManagement div .adManagement-desc::before {
+  width: 50px;
+  height: 3px;
+  position: absolute;
+  left: -70px;
+  top: 5px;
+  content: "";
+  background: black;
+}
+.main .cont-adManagement div .adManagement-cont-gird ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  grid-auto-rows: 160px;
+}
+.main .cont-adManagement div .adManagement-cont-gird ul li {
+  position: relative;
+  background: #f5f4f4;
+}
+.main .cont-adManagement div .adManagement-cont-gird ul li a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.main .cont-adManagement div .adManagement-cont-gird ul li a strong {
+  font-family: "GmarketSansBold";
+  margin-bottom: 10px;
+}
+.main .cont-adManagement div .adManagement-cont-gird ul li a p {
+  line-height: 1.9em;
+  font-size: 0.8em;
+}
+.main .cont-adManagement div .adManagement-cont-gird ul li:before {
+  content: "→";
+  position: absolute;
+  left: 43px;
+  bottom: 0px;
+  font-size: 2em;
+  transform: scaleX(2);
+}
+.main .cont-adManagement div .adManagement-cont-gird ul li::after {
+  content: "😃";
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 2em;
+}
+.main .cont-adManagement div .adManagement-cont-gird ul li:hover {
+  box-shadow: 0 5px 15px 1px rgba(29, 29, 29, 0.384);
+}
+.main .cont-marketing {
+  background: url(../img/bg3.jpg) no-repeat center center/cover;
+  color: white;
+}
+.main .cont-marketing div {
+  top: 100px;
+  transform: translateX(-50%);
+}
+.main .cont-marketing div .marketing-tit {
+  width: 300px;
+  position: relative;
+  display: inline-block;
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+.main .cont-marketing div .marketing-tit:after {
+  position: absolute;
+  right: 56px;
+  bottom: 0;
+  display: inline-block;
+  content: ".";
+  color: red;
+}
+.main .cont-marketing div .marketing-desc {
+  width: 250px;
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  line-height: 1.7em;
+  display: inline-block;
+  font-size: 0.8em;
+}
+.main .cont-marketing div .marketing-desc::before {
+  width: 45px;
+  height: 3px;
+  position: absolute;
+  left: -70px;
+  top: 5px;
+  content: "";
+  background: white;
+}
+.main .cont-marketing div .marketing-cont-grid ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.main .cont-marketing div .marketing-cont-grid ul li {
+  position: relative;
+  border: 1px solid #666666;
+  border-collapse: collapse;
+}
+.main .cont-marketing div .marketing-cont-grid ul li a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding: 70px 30px;
+  box-sizing: border-box;
+}
+.main .cont-marketing div .marketing-cont-grid ul li a strong {
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "GmarketSansBold";
+  margin: 50px 0 30px;
+}
+.main .cont-marketing div .marketing-cont-grid ul li a p {
+  font-size: 0.9em;
+  color: gray;
+}
+.main .cont-marketing div .marketing-cont-grid ul li:before {
+  content: "💡";
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3em;
+}
+.main .cont-marketing div .marketing-cont-grid ul li:hover {
+  background: #ce1717;
+  border: none;
+}
+.main .cont-marketing div .marketing-cont-grid ul li:hover p {
+  color: white;
+}
+.main .cont-marketing div .marketing-cont-grid ul li:hover a::after {
+  content: "→";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  font-size: 2em;
+  transform: scaleX(2);
+}
+.main .cont-analyze div {
+  top: 200px;
+}
+.main .cont-analyze div .analyze-tit {
+  width: 440px;
+  position: relative;
+  font-family: "GmarketSansBold";
+  font-size: 40px;
+}
+.main .cont-analyze div .analyze-tit::after {
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  display: inline-block;
+  content: ".";
+  color: red;
+}
+.main .cont-analyze div .analyze-desc {
+  width: 450px;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  line-height: 1.7em;
+  display: inline-block;
+  font-size: 1em;
+}
+.main .cont-analyze div .analyze-desc::before {
+  width: 45px;
+  height: 3px;
+  position: absolute;
+  left: -70px;
+  top: 5px;
+  content: "";
+  background: black;
+}
+.main .cont-analyze div .analyze-cont-grid {
+  width: 700px;
+  position: absolute;
+  top: 210px;
+  right: 0;
+}
+.main .cont-analyze div .analyze-cont-grid ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 60px;
+}
+.main .cont-analyze div .analyze-cont-grid ul li {
+  position: relative;
+  overflow: hidden;
+}
+.main .cont-analyze div .analyze-cont-grid ul li div a {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+.main .cont-analyze div .analyze-cont-grid ul li div a strong {
+  text-align: left;
+  font-size: 1.5em;
+  font-family: "GmarketSansBold";
+}
+.main .cont-analyze div .analyze-cont-grid ul li div a::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  background: black;
+}
+.main .cont-analyze div .analyze-cont-grid ul li div a::after {
+  content: "→";
+  position: absolute;
+  right: 0;
+  top: -5px;
+  font-size: 2.3em;
+  transform: scaleX(1.2);
+}
+.main .cont-analyze div .analyze-cont-grid ul li div:hover a::before {
+  animation: barSizeUp 1s;
+}
+.main .cont-analyze div .analyze-cont-grid ul li div:hover a::after {
+  animation: arrow 1s;
+}
+.main .cont-analyze div .analyze-cont-grid ul li p {
+  width: 300px;
+  font-size: 0.9em;
+}
+.main .cont-hire {
+  height: 60vh;
+}
+.main .cont-hire div {
+  top: 200px;
+}
+.main .cont-hire div .hire-tit {
+  width: 750px;
+  line-height: 60px;
+  position: relative;
+  font-family: "GmarketSansBold";
+  font-size: 40px;
+}
+.main .cont-hire div .hire-tit::after {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  display: inline-block;
+  content: ".";
+  color: red;
+}
+.main .cont-hire div .hire-cont-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+.main .cont-hire div .hire-cont-grid li {
+  flex-basis: 22%;
+  position: relative;
+  overflow: hidden;
+}
+.main .cont-hire div .hire-cont-grid li div a {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+.main .cont-hire div .hire-cont-grid li div a strong {
+  font-size: 1.5em;
+  font-family: "GmarketSansBold";
+}
+.main .cont-hire div .hire-cont-grid li div a::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  background: black;
+}
+.main .cont-hire div .hire-cont-grid li div a::after {
+  content: "→";
+  position: absolute;
+  right: 0;
+  top: -5px;
+  font-size: 2.3em;
+  transform: scaleX(1.2);
+}
+.main .cont-hire div .hire-cont-grid li div:hover a::before {
+  animation: barSizeUp 1s;
+}
+.main .cont-hire div .hire-cont-grid li div:hover a::after {
+  animation: arrow 1s;
+}
+.main .cont-hire div .hire-cont-grid li p {
+  font-size: 0.9em;
+}
+.main .cont-hire div .cont-consulting {
+  width: 100%;
+  position: absolute;
+  bottom: -100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: red;
+  color: white;
+  padding: 20px 80px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.308);
+  z-index: 20;
+}
+.main .cont-hire div .cont-consulting div h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+.main .cont-hire div .cont-consulting div p strong {
+  font-size: 2em;
+  font-family: "GmarketSansBold";
+}
+.main .cont-hire div .cont-consulting form div {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+.main .cont-hire div .cont-consulting form div fieldset {
+  flex-grow: 1;
+}
+.main .cont-hire div .cont-consulting form div fieldset input {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 3px;
+  border: none;
+}
+.main .cont-hire div .cont-consulting form div fieldset label input {
+  width: auto;
+  display: inline-block;
+}
+.main .cont-hire div .cont-consulting form div fieldset label p {
+  display: inline-block;
+  font-size: 0.9em;
+}
+.main .cont-hire div .cont-consulting form div button {
+  width: 150px;
+  height: 80px;
+  margin-left: 20px;
+  border-radius: 3px;
+  border: 2.5px solid white;
+  color: white;
+  font-size: 1.2em;
+  background: none;
+}
+.main .cont-address {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  z-index: -10;
+  background: #bd9f9f;
+}
+.main .cont-fix {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+.main .cont-fix div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.main .cont-fix div ul {
+  border-radius: 100px;
+  background: red;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+.main .cont-fix div ul li {
+  position: relative;
+}
+.main .cont-fix div ul li a strong {
+  opacity: 0;
+  transition: 1s all;
+  font-size: 0.8em;
+}
+.main .cont-fix div ul li a::before {
+  content: "🏡";
+  display: block;
+  font-size: 3em;
+}
+.main .cont-fix div ul li:nth-child(2) {
+  margin: 10px 0;
+}
+.main .cont-fix div:hover {
+  overflow: auto;
+  height: auto;
+}
+.main .cont-fix div:hover ul {
+  padding: 40px 0;
+}
+.main .cont-fix div:hover strong {
+  opacity: 1;
+}
+.main .cont-fix button {
+  display: block;
+  position: relative;
+  background: none;
+  border: none;
+  color: white;
+  margin: 10px auto;
+  text-shadow: 0 0 2px black;
+}
+.main .cont-fix button::before {
+  content: "↑";
+  position: absolute;
+  left: -5px;
+  bottom: 3px;
+}
+
+.footer {
+  background: black;
+}
+.footer .cont-center {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .cont-center .cont-company {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  color: gray;
+}
+.footer .cont-center .cont-company ul {
+  display: flex;
+  justify-content: flex-start;
+}
+.footer .cont-center .cont-company ul li {
+  color: white;
+  margin-right: 20px;
+  font-size: 1.1em;
+}
+.footer .cont-center .cont-company dl {
+  display: flex;
+  margin: 19px 0;
+  font-size: 0.8em;
+}
+.footer .cont-center .cont-company dl dt::after {
+  content: ":";
+  display: inline-block;
+  width: 5px;
+}
+.footer .cont-center .cont-company dl dd::after {
+  content: "|";
+  padding: 0 5px;
+}
+.footer .cont-center .cont-company dl dd:last-child:after {
+  display: none;
+}
+.footer .cont-center .cont-company p {
+  font-size: 0.8em;
+}
+.footer .cont-center a img {
+  width: 200px;
+}
+
+/*# sourceMappingURL=common.css.map */

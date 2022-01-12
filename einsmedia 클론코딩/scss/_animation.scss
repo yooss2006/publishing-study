@@ -1,0 +1,22 @@
+@keyframes barSizeUp {
+    0% {
+        transform: translateX(-330px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+
+}
