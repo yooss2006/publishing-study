@@ -27,3 +27,5 @@
 [modal 만들기](https://yooss2006.github.io/publishing-study/modal%20%EB%A7%8C%EB%93%A4%EA%B8%B0/modal.html)
 
 [checkbox 꾸미기](https://yooss2006.github.io/publishing-study/Input%20%EC%98%88%EC%81%98%EA%B2%8C%20%ED%95%98%EA%B8%B0/checkbox.html)
+
+[einsmeida 클론코딩](https://yooss2006.github.io/publishing-study/einsmedia%20%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9/index.html)
