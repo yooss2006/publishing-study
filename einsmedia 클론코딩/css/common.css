@@ -16,6 +16,7 @@ blockquote,
 fieldset {
   margin: 0;
   padding: 0;
+  margin-inline-start: 0;
 }
 
 h1,
@@ -82,13 +83,9 @@ input[type=text]::placeholder {
   font-style: italic;
 }
 
-input[type=text]:focus {
-  background-color: olive;
-  color: #fff;
-}
-
 button {
   cursor: pointer;
+  padding: 0;
 }
 
 .blind,
@@ -109,7 +106,7 @@ q::after {
 
 @keyframes barSizeUp {
   0% {
-    transform: translateX(-330px);
+    transform: translateX(-500px);
   }
   100% {
     transform: translateX(0);
@@ -144,65 +141,72 @@ body {
 
 .header {
   width: 100%;
-  height: 70px;
-  padding: 0 20px;
+  padding: 20px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   background: black;
+  color: white;
   box-sizing: border-box;
   z-index: 10;
-  transition: 0.5 all;
 }
 .header .header-tit a img {
   width: 150px;
 }
 .header .nav {
-  width: 800px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .header .nav .nav-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  margin-right: 20px;
 }
 .header .nav .nav-list .nav-item {
-  color: white;
+  margin-right: 2em;
+  font-size: 1em;
 }
-.header .nav .nav-list .nav-btn-list {
-  margin-left: 10px;
-}
-.header .nav .nav-list .nav-btn-list button {
+.header .nav button {
+  width: 3em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: none;
   border: none;
 }
-.header .nav .nav-list .nav-btn-list button img {
-  width: 40px;
+.header .nav button span {
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
 }
 
+.main {
+  font-size: 16px;
+}
 .main section {
   position: relative;
   height: 100vh;
-  z-index: 0;
-}
-.main .cont-width80 {
-  width: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
 }
 .main .cont-represent {
   background: url(../img/bg.jpg) no-repeat center center/cover;
   color: white;
+  display: flex;
+  align-items: center;
 }
-.main .cont-represent .cont-width80 h2 {
-  width: 800px;
+.main .cont-represent .cont-intro {
+  margin-left: 12em;
+}
+.main .cont-represent .cont-intro h2 {
   font-size: 4em;
   font-family: "GmarketSansBold";
 }
-.main .cont-represent .cont-width80 p {
-  margin-top: 10px;
+.main .cont-represent .cont-intro p {
+  margin-top: 1em;
 }
 .main .cont-represent .represent-slide {
   width: 150px;
@@ -223,43 +227,51 @@ body {
   flex-grow: 1;
 }
 .main .cont-represent .represent-cont-sns ul {
-  width: 100px;
+  width: 120px;
   position: absolute;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   left: 30px;
   bottom: 10px;
 }
 .main .cont-represent .represent-cont-sns ul li a img {
-  width: 20px;
+  width: 1.5em;
 }
 .main .cont-adManagement {
   background: white;
   color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
 }
-.main .cont-adManagement div .adManagement-tit {
-  width: 440px;
+.main .cont-adManagement header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3em;
+}
+.main .cont-adManagement header .adManagement-tit {
   position: relative;
   font-family: "GmarketSansBold";
-  font-size: 40px;
-  margin-bottom: 50px;
+  font-size: 3em;
+  line-height: 1.2;
 }
-.main .cont-adManagement div .adManagement-tit:after {
+.main .cont-adManagement header .adManagement-tit:after {
   position: absolute;
-  right: -10px;
+  right: -15px;
   bottom: 0;
-  display: inline-block;
   content: ".";
   color: red;
 }
-.main .cont-adManagement div .adManagement-desc {
-  width: 350px;
-  position: absolute;
-  top: 20px;
-  right: 100px;
-  font-size: 0.9em;
+.main .cont-adManagement header .adManagement-desc {
+  position: relative;
+  font-size: 1.1em;
+  margin-right: 4em;
+  line-height: 1.8;
 }
-.main .cont-adManagement div .adManagement-desc::before {
+.main .cont-adManagement header .adManagement-desc::before {
   width: 50px;
   height: 3px;
   position: absolute;
@@ -268,133 +280,143 @@ body {
   content: "";
   background: black;
 }
-.main .cont-adManagement div .adManagement-cont-gird ul {
+.main .cont-adManagement .adManagement-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
-  grid-auto-rows: 160px;
 }
-.main .cont-adManagement div .adManagement-cont-gird ul li {
+.main .cont-adManagement .adManagement-list li {
   position: relative;
   background: #f5f4f4;
 }
-.main .cont-adManagement div .adManagement-cont-gird ul li a {
+.main .cont-adManagement .adManagement-list li a {
   width: 100%;
   height: 100%;
-  display: inline-block;
-  padding: 30px;
+  display: block;
+  padding: 3em 3em;
   box-sizing: border-box;
 }
-.main .cont-adManagement div .adManagement-cont-gird ul li a strong {
+.main .cont-adManagement .adManagement-list li a strong {
+  display: block;
   font-family: "GmarketSansBold";
-  margin-bottom: 10px;
+  font-size: 1.5em;
+  margin-bottom: 1em;
 }
-.main .cont-adManagement div .adManagement-cont-gird ul li a p {
-  line-height: 1.9em;
-  font-size: 0.8em;
+.main .cont-adManagement .adManagement-list li a p {
+  font-size: 1em;
+  line-height: 2;
 }
-.main .cont-adManagement div .adManagement-cont-gird ul li:before {
+.main .cont-adManagement .adManagement-list li:before {
   content: "→";
   position: absolute;
-  left: 43px;
-  bottom: 0px;
+  left: 60px;
+  bottom: 5px;
   font-size: 2em;
   transform: scaleX(2);
 }
-.main .cont-adManagement div .adManagement-cont-gird ul li::after {
+.main .cont-adManagement .adManagement-list li::after {
   content: "😃";
   position: absolute;
   right: 30px;
-  top: 20px;
+  top: 40px;
   font-size: 2em;
 }
-.main .cont-adManagement div .adManagement-cont-gird ul li:hover {
+.main .cont-adManagement .adManagement-list li:hover {
   box-shadow: 0 5px 15px 1px rgba(29, 29, 29, 0.384);
 }
 .main .cont-marketing {
   background: url(../img/bg3.jpg) no-repeat center center/cover;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
 }
-.main .cont-marketing div {
-  top: 100px;
-  transform: translateX(-50%);
+.main .cont-marketing header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3em;
 }
-.main .cont-marketing div .marketing-tit {
-  width: 300px;
+.main .cont-marketing header .marketing-tit {
   position: relative;
-  display: inline-block;
-  font-size: 2em;
-  margin-bottom: 50px;
+  font-family: "GmarketSansBold";
+  font-size: 3em;
+  line-height: 1.2;
 }
-.main .cont-marketing div .marketing-tit:after {
+.main .cont-marketing header .marketing-tit:after {
   position: absolute;
-  right: 56px;
+  right: 78px;
   bottom: 0;
-  display: inline-block;
   content: ".";
   color: red;
 }
-.main .cont-marketing div .marketing-desc {
-  width: 250px;
-  position: absolute;
-  top: 10px;
-  right: 100px;
-  line-height: 1.7em;
-  display: inline-block;
-  font-size: 0.8em;
+.main .cont-marketing header .marketing-desc {
+  position: relative;
+  font-size: 1.1em;
+  margin-right: 10em;
+  line-height: 1.8;
 }
-.main .cont-marketing div .marketing-desc::before {
-  width: 45px;
+.main .cont-marketing header .marketing-desc::before {
+  width: 60px;
   height: 3px;
   position: absolute;
-  left: -70px;
+  left: -95px;
   top: 5px;
   content: "";
   background: white;
 }
-.main .cont-marketing div .marketing-cont-grid ul {
+.main .cont-marketing ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: -1px;
 }
-.main .cont-marketing div .marketing-cont-grid ul li {
+.main .cont-marketing ul li {
   position: relative;
-  border: 1px solid #666666;
-  border-collapse: collapse;
+  border-top: 1px solid #666666;
+  border-right: 1px solid #666666;
+  border-bottom: 1px solid #666666;
 }
-.main .cont-marketing div .marketing-cont-grid ul li a {
+.main .cont-marketing ul li a {
   width: 100%;
   height: 100%;
-  display: inline-block;
-  padding: 70px 30px;
+  display: block;
+  padding: 100px 50px;
   box-sizing: border-box;
 }
-.main .cont-marketing div .marketing-cont-grid ul li a strong {
+.main .cont-marketing ul li a strong {
   display: block;
   text-align: center;
   font-size: 1.5em;
   font-family: "GmarketSansBold";
-  margin: 50px 0 30px;
+  margin: 3em 0 30px;
 }
-.main .cont-marketing div .marketing-cont-grid ul li a p {
-  font-size: 0.9em;
+.main .cont-marketing ul li a p {
+  line-height: 1.8;
   color: gray;
 }
-.main .cont-marketing div .marketing-cont-grid ul li:before {
+.main .cont-marketing ul li:nth-child(1) {
+  border-left: 1px solid #666666;
+}
+.main .cont-marketing ul li:before {
   content: "💡";
   position: absolute;
-  top: 35px;
+  top: 80px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 3em;
 }
-.main .cont-marketing div .marketing-cont-grid ul li:hover {
+.main .cont-marketing ul li:hover {
   background: #ce1717;
-  border: none;
+  border-top: 1px solid #ce1717;
+  border-right: 1px solid #ce1717;
+  border-bottom: 1px solid #ce1717;
+  border-left: 1px solid #ce1717;
 }
-.main .cont-marketing div .marketing-cont-grid ul li:hover p {
+.main .cont-marketing ul li:hover p {
   color: white;
 }
-.main .cont-marketing div .marketing-cont-grid ul li:hover a::after {
+.main .cont-marketing ul li:hover a::after {
   content: "→";
   position: absolute;
   left: 50%;
@@ -403,219 +425,244 @@ body {
   font-size: 2em;
   transform: scaleX(2);
 }
-.main .cont-analyze div {
-  top: 200px;
+.main .cont-analyze {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
 }
-.main .cont-analyze div .analyze-tit {
-  width: 440px;
-  position: relative;
+.main .cont-analyze header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3em;
+}
+.main .cont-analyze header .analyze-tit {
   font-family: "GmarketSansBold";
-  font-size: 40px;
+  position: relative;
+  font-size: 3em;
+  line-height: 1.2;
 }
-.main .cont-analyze div .analyze-tit::after {
+.main .cont-analyze header .analyze-tit::after {
   position: absolute;
-  right: 100px;
+  right: 80px;
   bottom: 0;
-  display: inline-block;
   content: ".";
   color: red;
 }
-.main .cont-analyze div .analyze-desc {
-  width: 450px;
-  position: absolute;
-  top: 30px;
-  right: 0px;
-  line-height: 1.7em;
-  display: inline-block;
-  font-size: 1em;
+.main .cont-analyze header .analyze-desc {
+  position: relative;
+  font-size: 1.1em;
+  margin-right: 10em;
+  line-height: 1.8;
 }
-.main .cont-analyze div .analyze-desc::before {
-  width: 45px;
+.main .cont-analyze header .analyze-desc::before {
+  width: 60px;
   height: 3px;
   position: absolute;
-  left: -70px;
+  left: -95px;
   top: 5px;
   content: "";
   background: black;
 }
-.main .cont-analyze div .analyze-cont-grid {
-  width: 700px;
-  position: absolute;
-  top: 210px;
-  right: 0;
-}
-.main .cont-analyze div .analyze-cont-grid ul {
+.main .cont-analyze ul {
+  width: 50%;
+  margin: 0 0 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 40px;
-  grid-row-gap: 60px;
+  grid-column-gap: 3em;
+  grid-row-gap: 5em;
 }
-.main .cont-analyze div .analyze-cont-grid ul li {
-  position: relative;
+.main .cont-analyze ul li {
   overflow: hidden;
 }
-.main .cont-analyze div .analyze-cont-grid ul li div a {
+.main .cont-analyze ul li div a {
   width: 100%;
-  display: inline-block;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  position: relative;
+  display: block;
   box-sizing: border-box;
 }
-.main .cont-analyze div .analyze-cont-grid ul li div a strong {
+.main .cont-analyze ul li div a strong {
   text-align: left;
   font-size: 1.5em;
   font-family: "GmarketSansBold";
 }
-.main .cont-analyze div .analyze-cont-grid ul li div a::before {
+.main .cont-analyze ul li div a::before {
   content: "";
   width: 100%;
   height: 3px;
   position: absolute;
   left: 0;
-  top: 40px;
+  bottom: 0;
   background: black;
 }
-.main .cont-analyze div .analyze-cont-grid ul li div a::after {
-  content: "→";
+.main .cont-analyze ul li div a::after {
+  content: "";
   position: absolute;
+  width: 50px;
+  height: 30px;
   right: 0;
-  top: -5px;
-  font-size: 2.3em;
-  transform: scaleX(1.2);
+  top: 10px;
+  background: url(../img/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-.main .cont-analyze div .analyze-cont-grid ul li div:hover a::before {
+.main .cont-analyze ul li div:hover a::before {
   animation: barSizeUp 1s;
 }
-.main .cont-analyze div .analyze-cont-grid ul li div:hover a::after {
+.main .cont-analyze ul li div:hover a::after {
   animation: arrow 1s;
 }
-.main .cont-analyze div .analyze-cont-grid ul li p {
-  width: 300px;
-  font-size: 0.9em;
+.main .cont-analyze ul li p {
+  line-height: 1.8;
 }
 .main .cont-hire {
-  height: 60vh;
-}
-.main .cont-hire div {
-  top: 200px;
-}
-.main .cont-hire div .hire-tit {
-  width: 750px;
-  line-height: 60px;
   position: relative;
-  font-family: "GmarketSansBold";
-  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 50px;
 }
-.main .cont-hire div .hire-tit::after {
+.main .cont-hire .hire-information {
+  flex-basis: 60%;
+  padding: 0 50px;
+}
+.main .cont-hire .hire-information .hire-tit {
+  font-family: "GmarketSansBold";
+  position: relative;
+  font-size: 3em;
+  line-height: 1.2;
+  margin-bottom: 2em;
+}
+.main .cont-hire .hire-information .hire-tit::after {
   position: absolute;
-  right: 15px;
   bottom: 0;
-  display: inline-block;
   content: ".";
   color: red;
 }
-.main .cont-hire div .hire-cont-grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 100px;
+.main .cont-hire .hire-information ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 6em;
 }
-.main .cont-hire div .hire-cont-grid li {
-  flex-basis: 22%;
-  position: relative;
+.main .cont-hire .hire-information ul li {
   overflow: hidden;
 }
-.main .cont-hire div .hire-cont-grid li div a {
+.main .cont-hire .hire-information ul li div a {
   width: 100%;
-  display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  position: relative;
+  display: block;
   box-sizing: border-box;
 }
-.main .cont-hire div .hire-cont-grid li div a strong {
+.main .cont-hire .hire-information ul li div a strong {
+  text-align: left;
   font-size: 1.5em;
   font-family: "GmarketSansBold";
 }
-.main .cont-hire div .hire-cont-grid li div a::before {
+.main .cont-hire .hire-information ul li div a::before {
   content: "";
   width: 100%;
   height: 3px;
   position: absolute;
   left: 0;
-  top: 40px;
+  bottom: 0;
   background: black;
 }
-.main .cont-hire div .hire-cont-grid li div a::after {
-  content: "→";
+.main .cont-hire .hire-information ul li div a::after {
+  content: "";
   position: absolute;
+  width: 50px;
+  height: 30px;
   right: 0;
-  top: -5px;
-  font-size: 2.3em;
-  transform: scaleX(1.2);
+  top: 10px;
+  background: url(../img/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-.main .cont-hire div .hire-cont-grid li div:hover a::before {
+.main .cont-hire .hire-information ul li div:hover a::before {
   animation: barSizeUp 1s;
 }
-.main .cont-hire div .hire-cont-grid li div:hover a::after {
+.main .cont-hire .hire-information ul li div:hover a::after {
   animation: arrow 1s;
 }
-.main .cont-hire div .hire-cont-grid li p {
-  font-size: 0.9em;
+.main .cont-hire .hire-information ul li p {
+  line-height: 1.8;
 }
-.main .cont-hire div .cont-consulting {
-  width: 100%;
+.main .cont-hire .cont-consulting {
+  width: 95%;
   position: absolute;
-  bottom: -100px;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  background-color: red;
   color: white;
-  padding: 20px 80px;
+  background-color: red;
+  padding: 20px 100px;
   box-sizing: border-box;
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.308);
-  z-index: 20;
 }
-.main .cont-hire div .cont-consulting div h3 {
-  font-size: 1.3em;
-  margin-bottom: 10px;
-}
-.main .cont-hire div .cont-consulting div p strong {
-  font-size: 2em;
-  font-family: "GmarketSansBold";
-}
-.main .cont-hire div .cont-consulting form div {
-  width: 600px;
+.main .cont-hire .cont-consulting header {
+  flex-basis: 40%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
 }
-.main .cont-hire div .cont-consulting form div fieldset {
+.main .cont-hire .cont-consulting header h2 {
+  font-family: "GmarketSansBold";
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+.main .cont-hire .cont-consulting header p strong {
+  font-family: "GmarketSansBold";
+  font-size: 2em;
+}
+.main .cont-hire .cont-consulting .formOut {
+  flex-basis: 60%;
+}
+.main .cont-hire .cont-consulting .formOut .formIn {
+  display: flex;
+  align-items: flex-start;
+}
+.main .cont-hire .cont-consulting .formOut .formIn fieldset {
   flex-grow: 1;
 }
-.main .cont-hire div .cont-consulting form div fieldset input {
-  width: 100%;
-  padding: 10px 20px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
+.main .cont-hire .cont-consulting .formOut .formIn fieldset input {
   display: block;
-  border-radius: 3px;
+  width: 90%;
+  height: 3em;
+  margin-bottom: 10px;
   border: none;
+  border-radius: 5px;
+  padding-left: 10px;
 }
-.main .cont-hire div .cont-consulting form div fieldset label input {
+.main .cont-hire .cont-consulting .formOut .formIn fieldset label {
+  display: flex;
+  align-items: center;
+}
+.main .cont-hire .cont-consulting .formOut .formIn fieldset label input {
   width: auto;
+  height: auto;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+.main .cont-hire .cont-consulting .formOut .formIn fieldset label p {
   display: inline-block;
 }
-.main .cont-hire div .cont-consulting form div fieldset label p {
-  display: inline-block;
-  font-size: 0.9em;
-}
-.main .cont-hire div .cont-consulting form div button {
-  width: 150px;
-  height: 80px;
-  margin-left: 20px;
-  border-radius: 3px;
-  border: 2.5px solid white;
-  color: white;
-  font-size: 1.2em;
+.main .cont-hire .cont-consulting .formOut .formIn button {
+  flex-basis: 200px;
+  padding: 28px 10px;
+  border: 3px solid white;
   background: none;
+  color: white;
+  font-size: 1.5em;
+}
+.main .cont-hire .map {
+  flex-basis: 40%;
+  background-color: olivedrab;
 }
 .main .cont-address {
   width: 100%;
@@ -628,109 +675,111 @@ body {
   position: fixed;
   right: 30px;
   bottom: 30px;
-}
-.main .cont-fix div {
-  width: 100px;
-  height: 100px;
-  position: relative;
+  width: 75px;
+  height: 270px;
+  color: white;
   border-radius: 100px;
   overflow: hidden;
 }
-.main .cont-fix div ul {
-  border-radius: 100px;
+.main .cont-fix ul {
   background: red;
+  height: 200px;
   color: white;
   text-align: center;
   padding: 20px 0;
-}
-.main .cont-fix div ul li {
-  position: relative;
-}
-.main .cont-fix div ul li a strong {
-  opacity: 0;
+  border-radius: 100px;
+  transform: translateY(195px);
   transition: 1s all;
-  font-size: 0.8em;
 }
-.main .cont-fix div ul li a::before {
+.main .cont-fix ul li a strong {
+  opacity: 0;
+  font-size: 0.8em;
+  transition: 3s all;
+}
+.main .cont-fix ul li a::before {
   content: "🏡";
   display: block;
-  font-size: 3em;
+  font-size: 1.5em;
 }
-.main .cont-fix div ul li:nth-child(2) {
+.main .cont-fix ul li:nth-child(2) {
   margin: 10px 0;
-}
-.main .cont-fix div:hover {
-  overflow: auto;
-  height: auto;
-}
-.main .cont-fix div:hover ul {
-  padding: 40px 0;
-}
-.main .cont-fix div:hover strong {
-  opacity: 1;
 }
 .main .cont-fix button {
   display: block;
-  position: relative;
+  position: fixed;
+  bottom: 8px;
+  right: 49px;
   background: none;
   border: none;
   color: white;
-  margin: 10px auto;
   text-shadow: 0 0 2px black;
 }
 .main .cont-fix button::before {
   content: "↑";
   position: absolute;
-  left: -5px;
-  bottom: 3px;
+  left: -10px;
+  bottom: 2px;
+}
+.main .cont-fix:hover ul {
+  transform: translateY(30px);
+}
+.main .cont-fix:hover ul li a strong {
+  opacity: 1;
 }
 
 .footer {
   background: black;
-}
-.footer .cont-center {
-  width: 80%;
-  margin: 0 auto;
+  padding: 70px 50px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.footer .cont-center .cont-company {
-  margin: 40px 0;
-  display: flex;
-  flex-direction: column;
-  color: gray;
-}
-.footer .cont-center .cont-company ul {
+.footer .cont-company ul {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 30px;
+  color: #e0e0e0;
 }
-.footer .cont-center .cont-company ul li {
-  color: white;
-  margin-right: 20px;
-  font-size: 1.1em;
+.footer .cont-company ul li {
+  margin-right: 1em;
+  font-size: 1em;
 }
-.footer .cont-center .cont-company dl {
+.footer .cont-company dl {
   display: flex;
-  margin: 19px 0;
+  align-items: center;
   font-size: 0.8em;
+  color: #999999;
+  margin-bottom: 16px;
 }
-.footer .cont-center .cont-company dl dt::after {
+.footer .cont-company dl dt::after {
   content: ":";
   display: inline-block;
-  width: 5px;
+  width: 7px;
 }
-.footer .cont-center .cont-company dl dd::after {
-  content: "|";
-  padding: 0 5px;
+.footer .cont-company dl dd {
+  display: flex;
+  align-items: center;
 }
-.footer .cont-center .cont-company dl dd:last-child:after {
+.footer .cont-company dl dd::after {
+  width: 1px;
+  height: 1em;
+  content: "";
+  background: #999999;
+  display: inline-block;
+  margin: 0 10px;
+}
+.footer .cont-company dl dd:last-child:after {
   display: none;
 }
-.footer .cont-center .cont-company p {
+.footer .cont-company p {
+  color: #999999;
   font-size: 0.8em;
 }
-.footer .cont-center a img {
+.footer a {
+  right: 0;
+}
+.footer a img {
   width: 200px;
 }
 

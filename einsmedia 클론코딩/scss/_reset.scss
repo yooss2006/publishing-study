@@ -16,6 +16,7 @@ blockquote,
 fieldset {
   margin: 0;
   padding: 0;
+  margin-inline-start: 0;
 }
 
 h1,
@@ -78,13 +79,10 @@ input[type="text"]::placeholder {
   color: #999;
   font-style: italic;
 }
-input[type="text"]:focus {
-  background-color: olive;
-  color: #fff;
-}
 
 button {
   cursor: pointer;
+  padding: 0;
 }
 
 .blind,
