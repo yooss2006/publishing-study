@@ -1,0 +1,102 @@
+@charset "utf-8"; //html 문서랑 같은걸 적어주면 됨
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+  margin-inline-start: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b,
+th {
+  font-weight: inherit;
+}
+
+i,
+em,
+address {
+  font-style: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+mark {
+  background: transparent;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+table {
+  border-spacing: 0; //셀과 셀사이의 간격
+  border-collapse: col; //선과선이 만나면 병합한다.
+}
+th,
+td {
+  border: 1px solid red;
+}
+
+fieldset {
+  border: none;
+}
+
+input[type="text"]::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+}
+
+.blind,
+hr,
+legend {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+q::before,
+q::after {
+  content: "";
+}
