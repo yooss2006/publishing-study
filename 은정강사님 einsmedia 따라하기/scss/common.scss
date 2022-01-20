@@ -35,11 +35,13 @@ body {
   z-index: 99;
   h1 {
     width: 142px;
+    color: #fff;
     a {
       //높이는 부모한테 안주는 것을 추천
       height: 60px;
       display: block;
-      @include bg("mainLogo.png", $size: contain);
+      // @include bg("mainLogo.png", $size: contain);
+      @include ir("mainLogo.png");
     }
   }
   .gnb {
