@@ -1,13 +1,13 @@
-// ""로 넣는게 좋다.
+// utf-8은 ""로 넣는게 좋다.
 @charset "utf-8";
-
+//폰트 불러온 것
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400;1,700&family=Noto+Sans+KR:wght@100;300;400;500;700&family=Noto+Serif+KR:wght@700&display=swap");
 
 //변수는 reset 보다 위에
 $url: "../images/";
 $main: #e60012;
 $gray: #333, #666, #999, #d8d8d8, #f5f6f7;
-// background-color:nth($gray, 3) #999
+// background-color:nth($gray, 3) #999 : 배열처럼 사용 가능하다.
 
 @import "reset", "mixin";
 
@@ -25,6 +25,7 @@ body {
 }
 
 .pageHeader {
+  //mixin 폴더에 있음
   @include flex($a: center);
   padding: 0 25px;
   //width 100%를 주지말자.
@@ -136,6 +137,7 @@ section.area {
   @include flex($a: center, $j: center);
 
   &.visual {
+    //section.area 중 클래스가 visual인 것
     @include bg("mainBG_01.jpg");
     color: #fff;
     h2 {
