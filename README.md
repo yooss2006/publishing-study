@@ -30,3 +30,9 @@
 
 [einsmeida 클론코딩](https://yooss2006.github.io/publishing-study/einsmedia%20%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9/index.html)
 [einsmeida 클론코딩 수정](https://yooss2006.github.io/publishing-study/einsmedia%EC%88%98%EC%A0%95/index.html)
+
+## 느낀점
+
+퍼블리싱 스터디에서 배운 내용이 비록 화려한 기술은 아니지만 멘토님의 강의를 듣고 같이 하며 퍼블리싱에 대한 기반을 제대로 다진 것 같아서 좋습니다.
+
+앞으로도 프로젝트를 하거나 취직해서 웹페이지를 만들 때 가르침 받은 내용을 기반으로 접근성을 준수하는 개발자가 되겠습니다.
